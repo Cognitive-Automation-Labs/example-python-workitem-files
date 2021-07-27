@@ -1,4 +1,11 @@
-from variables import *
+from RPA.Tables import Tables
+from RPA.Robocloud.Items import Items
+import os
+import json
+
+tables = Tables()
+items = Items()
+workitem_filename = "data.csv"
 
 
 def save_file_into_work_item(local_filepath, replace=False):
