@@ -20,6 +20,7 @@ def add_new_data_row_to_csv_file(filepath, row):
 
 def minimal_task():
     print(os.getcwd())
+    print(os.listdir())
     items.load_work_item_from_environment()
     local_data_filepath = items.get_work_item_file(workitem_filename)
     with open(local_data_filepath, "r") as fin:
