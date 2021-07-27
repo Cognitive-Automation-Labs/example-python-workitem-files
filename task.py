@@ -1,11 +1,4 @@
-from RPA.Tables import Tables
-from RPA.Robocloud.Items import Items
-import os
-import json
-
-tables = Tables()
-items = Items()
-workitem_filename = "data.csv"
+from variables import *
 
 
 def save_file_into_work_item(local_filepath, replace=False):
@@ -26,6 +19,7 @@ def add_new_data_row_to_csv_file(filepath, row):
 
 
 def minimal_task():
+    print(os.getcwd())
     items.load_work_item_from_environment()
     local_data_filepath = items.get_work_item_file(workitem_filename)
     with open(local_data_filepath, "r") as fin:
